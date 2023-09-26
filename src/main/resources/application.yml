@@ -1,0 +1,19 @@
+server:
+  port: 9003
+
+spring:
+  threads:
+    virtual:
+      enabled: true
+  datasource:
+    url: jdbc:postgresql://postgresql.cfjzxawtcfzn.ap-south-1.rds.amazonaws.com:5432/postgresql_new
+    username: postgresql
+    password: postgresql
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+cart:
+  url: http://localhost:9002/cart
