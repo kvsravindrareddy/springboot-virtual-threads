@@ -6,6 +6,8 @@ import org.springframework.http.MediaType;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestClient;
 
+import java.time.LocalDateTime;
+
 @Service
 public class CartClient {
 
@@ -22,5 +24,9 @@ public class CartClient {
         restClient.post().uri(cartConfig.getUrl()+"?userId="+userId)
                 .contentType(MediaType.APPLICATION_JSON)
                 .body(product).retrieve().toBodilessEntity();
+    }
+
+    public static void main(String[] args) {
+        System.out.println(LocalDateTime.now());
     }
 }
